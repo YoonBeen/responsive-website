@@ -42,7 +42,9 @@ const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", ()=>{
     navbarMenu.classList.toggle("open");
 });
-const homeMainHeight = document.querySelector("#home").getBoundingClientRect.height;
+
+//arrow-up
+const homeMainHeight = document.querySelector("#home").getBoundingClientRect().height;
 const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", ()=>{
     if(window.scrollY/homeMainHeight > 0.5){
