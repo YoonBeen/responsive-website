@@ -42,6 +42,19 @@ const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", ()=>{
     navbarMenu.classList.toggle("open");
 });
+const homeMainHeight = document.querySelector("#home").getBoundingClientRect.height;
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", ()=>{
+    if(window.scrollY/homeMainHeight > 0.5){
+        arrowUp.classList.add("visible");
+    }
+    else{
+        arrowUp.classList.remove("visible");
+    }
+});
+arrowUp.addEventListener("click", ()=>{
+    scrollIntoView("#home");
+});
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);

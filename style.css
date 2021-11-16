@@ -477,6 +477,11 @@ p {
   color: var(--color-white);
   background-color: var(--color-pink);
   border-radius: 50%;
+  display: none;
+}
+
+.arrow-up.visible {
+  display: block;
 }
 
 /* For below 768px screen width */
